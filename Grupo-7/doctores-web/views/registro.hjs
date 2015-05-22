@@ -1,0 +1,76 @@
+
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+<html ng-app="doctoresLogin">
+<head>
+		<meta charset="utf-8">
+		<link href="stylesheets/registro-style.css" rel='stylesheet' type='text/css' />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+		<!--webfonts-->
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text.css'/>
+		<!--//webfonts-->
+</head>
+<body>
+	<div class="main" ng-controller="registroController as registroCtrl">
+		<div class="header" >
+			<h1>Login o Crea una nueva cuenta!</h1>
+		</div>
+		<p>Aplicaci&oacute;n para el monitoreo de migra&ntilde;as. Plataforma doctores</p>
+			<form ng-submit="registroCtrl.crearCuenta()">
+				<ul class="left-form">
+					<h2>Nueva Cuenta:</h2>
+					<li>
+						<input type="text"   placeholder="Nombre" required ng-model="registroCtrl.registro.givenName"/>
+						<div class="clear"> </div>
+					</li>
+					<li>
+						<input type="text"   placeholder="Apellido" required ng-model="registroCtrl.registro.surname"/>
+						<div class="clear"> </div>
+					</li>  
+					<li>
+						<input type="text"   placeholder="Username" required ng-model="registroCtrl.registro.username"/>
+						<div class="clear"> </div>
+					</li> 
+					<li>
+						<input type="text"   placeholder="Email" required ng-model="registroCtrl.registro.email"/>
+						<div class="clear"> </div>
+					</li> 
+					<li>
+						<input type="password"   placeholder="password" required ng-model="registroCtrl.registro.password"/>
+						<div class="clear"> </div>
+					</li> 
+					<li>
+						<input type="password"   placeholder="password" required/>
+						<div class="clear"> </div>
+					</li> 
+					<input type="submit" value="Crear cuenta">
+					<div class="clear"> </div>
+				</ul>
+			</form>
+			<form ng-submit="registroCtrl.autenticar()">
+				<ul class="right-form">
+					<h3>Login:</h3>
+					<div>
+						<li><input type="text"  placeholder="Username" required ng-model="registroCtrl.login.username"/></li>
+						<li> <input type="password"  placeholder="Password" required ng-model="registroCtrl.login.password"/></li>
+						<input type="submit" value="Login" >
+					</div>
+					<div class="clear"> </div>
+				</ul>
+				<div class="clear"> </div>
+					
+			</form>
+			
+		</div>
+	
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+    <script type="text/javascript" src="/javascripts/controllerRegistro.js"></script>
+	
+</body>
+</html>
